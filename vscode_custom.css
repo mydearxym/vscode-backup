@@ -1,0 +1,155 @@
+/* 欢迎页自定义 */
+.welcomePage .commands {
+  display: none;
+}
+
+.welcomePage .splash  .help {
+  display: none;
+}
+
+.monaco-workbench .part.editor>.content .welcomePage .title {
+  margin-top: 1em;
+  margin-bottom: .5em;
+  flex: 1 100%;
+  display: none;
+}
+
+.monaco-workbench .part.editor > .content .welcomePage a {
+  color: #2aa8a2;
+  transition: all .3s;
+}
+
+.monaco-workbench .part.editor>.content .welcomePage .row {
+  display: flex;
+  flex-flow: row;
+  margin-left: 20%;
+}
+
+.monaco-workbench .part.editor>.content .welcomePage .splash .showOnStartup, .monaco-workbench .part.editor>.content .welcomePage .splash .title {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: none;
+}
+
+.monaco-workbench .part.editor>.content .welcomePage .splash li {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 3px 0;
+}
+
+.monaco-workbench .part.editor > .content .welcomePage a:hover, .monaco-workbench .part.editor > .content .welcomePage a:active {
+  color: #6cc1bd;
+  border-left: 3px solid;
+  border-left-color: #41827e;
+  padding-left: 5px;
+  background: #2aa8a238;
+  padding: 0 10px;
+}
+
+/* 欢迎页自定义 end *
+
+/* 自定义 quickOpen 位置 */
+.monaco-quick-open-widget {
+	position: absolute;
+	width: 600px;
+	z-index: 2000;
+	padding-bottom: 6px;
+	left: 55%;
+  top: 24% !important;
+  margin-left: -300px;
+  border: 1px solid #22A7A2;
+  border-bottom: 2px solid #22A7A2;
+}
+
+/* 自定义小 quickOpen 位置 */
+.quick-input-widget {
+  position: absolute;
+  width: 600px;
+  z-index: 2000;
+  padding-bottom: 6px;
+  left: 55%;
+  top: 24% !important;
+  margin-left: -300px;
+  border: 1px solid #22A7A2;
+  border-bottom: 2px solid #22A7A2;
+}
+
+/* 自定义错误显示样式 */
+.monaco-editor .squiggly-error {
+  border: 1px solid tomato;
+  border-bottom-width: 1px;
+  border-radius: 3px;
+  background: none !important;
+  background-color: RGBA(255, 97, 136, 0.3) !important;
+}
+
+.monaco-breadcrumbs-picker .monaco-icon-label-description-container .monaco-highlighted-label {
+  color: #77918F;
+}
+
+.monaco-breadcrumbs-picker .monaco-icon-label-description-container .focused a {
+  color: tomato !important
+}
+
+.monaco-breadcrumbs-picker .monaco-icon-label-description-container .selected a {
+  color: tomato !important
+}
+
+.show-file-icons .folder-icon::before {
+  color: #2AA8A2;
+  content: '';
+}
+
+.monaco-workbench.titlebar-less:not(.fullscreen) .activitybar:not([aria-hidden="true"]) + .sidebar:not(.right) + .editor .title, .monaco-workbench.titlebar-less .split-view-container .split-view-view + .split-view-view .title {
+  padding-left: 0 !important;
+  color: #89bbb8;
+}
+
+/* search results 自定义 */
+.search-view .linematch>.match {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+  color: #b9a888;
+  background: #053d58;
+  padding: 0 10px;
+  border-left: 2px dotted #756c5c;
+  margin-left: 14px;
+}
+
+.monaco-workbench .search-view .findInFileMatch {
+  background-color: #246163;
+  color: #a8e5e6;
+  padding: 0 5px;
+  border-radius: 6px;
+}
+
+/* search results 里的文件行数目 */
+.search-view .linematch .matchLineNum {
+  margin-left: 7px;
+  margin-right: 4px;
+  opacity: .7;
+  font-size: .9em;
+  display: none;
+  color: rgba(141, 243, 235, 0.69);
+}
+
+/* 改变 action bar icon 的透明度 */
+.monaco-action-bar {
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0.6;
+}
+
+/* 高亮 status-bar 的第一个 */
+.monaco-workbench .part.statusbar>.statusbar-item.left>:first-child {
+
+  margin-right: 3px;
+  margin-left: 3px;
+  color: #0ba59f;
+}
