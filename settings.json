@@ -1,0 +1,1156 @@
+// Place your settings in this file to overwrite the default settings
+{
+  // base color
+  // "editor.foreground": "grey",
+  "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
+  "sync.gist": "679f0ba4ae63ea95175b352f7faa0276",
+  "workbench.statusBar.visible": true,
+  "workbench.activityBar.visible": false,
+  "editor.tabCompletion": "on",
+  // 搜索结果显示在 panel 中
+  "search.location": "panel",
+  "search.showLineNumbers": true,
+  // custom title bar
+  "window.titleBarStyle": "custom",
+  "window.nativeTabs": false,
+  // Tabs
+  "workbench.editor.showTabs": false,
+  "explorer.confirmDelete": false,
+  "window.zoomLevel": 1,
+  "editor.cursorBlinking": "smooth",
+  "editor.minimap.enabled": false,
+  "terminal.explorerKind": "external",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "editor.parameterHints.enabled": false,
+  // PLUGIN:  prettier 配置
+  "prettier.eslintIntegration": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.requireConfig": true,
+  "editor.matchBrackets": false,
+  // 不要高亮相同的单词，很晃眼睛
+  "editor.occurrencesHighlight": false,
+  "workbench.sideBar.location": "left",
+  "workbench.editor.labelFormat": "short",
+  "workbench.colorCustomizations": {
+    // 搜索结果的高亮
+    "editor.findMatchHighlightBackground": "#7d3f4d",
+    // "editor.foreground": "#BBC3CE",
+    // "editor.foreground": "#a5776c",
+    "editor.foreground": "#91a4a5",
+    "editorLink.activeForeground": "#1983A0",
+    // "dropdown.foreground": "tomato",
+    // quickOpen 搜索中的关键字高亮
+    "list.highlightForeground": "#2AA8A2",
+    // "list.inactiveSelectionBackground": "#00445488",
+
+    "editorCursor.foreground": "#38B1AB",
+    "editorLineNumber.foreground": "#294A56",
+    "editorLineNumber.activeForeground": "#2FA097",
+    "editorIndentGuide.activeBackground": "#104757",
+    // 目前好像就 gitlens 的 head message 在用
+    "editorCodeLens.foreground": "#556E74",
+    // 选中的时候其他单词的背景不要变啊
+    // "editor.selectionHighlightBackground": "#00262F",
+    // breadcrumb 菜单
+    "[Braver's Solarized Dark (themed workbench)]": {
+      "badge.background": "#336a6b",
+      "badge.foreground": "#dad5d5",
+      "breadcrumb.activeSelectionForeground": "#6AAFB6",
+      "breadcrumb.background": "#022B36",
+      "breadcrumb.focusForeground": "#2d879e",
+      "breadcrumb.foreground": "#256c7e",
+      "breadcrumbPicker.background": "#022B36",
+      "widget.shadow": "#01222B",
+      // 文件树和多功能版字体颜色
+      "sideBar.foreground": "#829c9a",
+      "sideBar.background": "#002630",
+      "sideBarTitle.foreground": "#288eaa",
+      // 文件树 hover
+      "list.hoverBackground": "#003b3f",
+      // command palette && menu active background
+      "list.focusBackground": "#08485a",
+      "tab.activeForeground": "#30b1ac",
+      "statusBar.foreground": "#246d81",
+      // ctrl+x ctrl+f 搜索外框颜色
+      "listFilterWidget.outline": "#38B1AB",
+      // ctrl+x ctrl+f 搜索内框颜色
+      "listFilterWidget.background": "#074c5f",
+      // 文件树当前最亮
+      "list.inactiveSelectionForeground": "#45cfc8",
+      // 同上，背景色
+      "list.inactiveSelectionBackground": "#063744",
+      // 当前文件高亮的颜色
+      "list.activeSelectionForeground": "#3DC8",
+      // test
+      // panel
+      "panel.background": "#053744",
+      "panel.dropBackground": "#ffffff1f",
+      "panelTitle.activeBorder": "#2b2b4a",
+      "panelTitle.activeForeground": "#2ba5a1",
+      "panelTitle.inactiveForeground": "#919FA3",
+      // // test
+      // "menu.foreground": "#61455d",
+      // "list.highlightForeground": "#1ebcc5",
+    },
+  },
+  // breadcrumbs
+  "breadcrumbs.enabled": true,
+  // "breadcrumbs.filePath": "last",
+  "breadcrumbs.symbolPath": "off",
+  "editor.tokenColorCustomizations": {
+    "[Braver's Solarized Dark (themed workbench)]": {
+      // "keywords": "#B78EAC",
+      // "functions": "#5BB0B7",
+      // "types": "#3e83b1",
+      // NOTE:  Elixir 相关
+      "textMateRules": [
+        // variable.other.readwrite.js
+        {
+          "scope": [
+            "variable.other.readwrite.js",
+            "variable.other.readwrite.alias.js"
+          ],
+          "settings": {
+            "foreground":  "#91a4a5"
+          }
+        },
+        {
+          "scope": [
+            "constant.other.symbol.elixir"
+          ],
+          "settings": {
+            // "foreground": "#1ebdb3"
+            "foreground":  "#32A197"//  "#c7c156"
+          }
+        },
+        // Elixir import, alias ...
+        {
+          "scope": "keyword.other.special-method.elixir",
+          "settings": {
+            "foreground": "#588482"
+          }
+        },
+        {
+          "scope": [
+            // "variable.other.readwrite",
+             "variable.other.object.elixir",
+             "variable.other.constant.elixir"
+          ],
+          "settings": {
+            "foreground": "#a7987a"
+          }
+        },
+        {
+          "scope": [
+             "string.quoted.double.heredoc.elixir",
+          ],
+          "settings": {
+            "foreground": "#50807d"
+          }
+        },
+        {
+          "scope": [
+             "punctuation.definition.variable.elixir",
+          ],
+          "settings": {
+            "foreground": "#50807d"
+          }
+        },
+        // punctuation.definition.variable.elixir
+        // tag, 测试里面的变量等等
+        {
+          "scope": [
+            // "variable.other.readwrite",
+            "variable.other.readwrite.module.elixir"
+          ],
+          "settings": {
+            "foreground": "#acc6c7"
+          }
+        },
+        // variable.other.readwrite.module.elixir
+        // Elixir 相关 end
+        {
+          "scope": [
+            "meta.import keyword",
+            "keyword.control.import",
+            "keyword.control.import.from",
+            "keyword.other.import",
+            "keyword.control.at-rule.include",
+            "keyword.control.at-rule.import"
+          ],
+          "settings": {
+            "foreground": "#967a9b"
+          },
+        },
+        // 字符串，不是组件
+        {
+          "scope": [
+            "string.quoted.double",
+            "string.quoted.single"
+          ],
+          "settings": {
+            // "foreground": "#9DAA7B"
+            "foreground": "#8ea264"
+          }
+        },
+        // 各种解构参数，属性值等等
+        {
+          "scope": "variable",
+          "settings": {
+            // "foreground": "#bd8c55"
+            // "foreground": "#6c8ea9"
+            "foreground": "#139c9e"
+          }
+        },
+        // NOTE:  react 属性也包含在内，蛋疼
+        { 
+          "scope": [
+            "keyword.control.class",
+            "meta.class",
+            "entity.name.class",
+            "entity.name.type.class"
+          ],
+          "settings": {
+           //  "foreground": "#bea484"
+            "foreground": "#7194a7"
+          }
+        },
+        //  FIXME: not work
+        {
+          "scope": "variable.function",
+          "settings": {
+            "foreground": "#6BB0B7"
+          }
+        },
+        // 函数名颜色, 墨绿
+        {
+          "scope": "entity.name.function",
+          "settings": {
+            "foreground": "#7ba6c1"// "#32A197"
+          }
+        },
+        // const 之类
+        {
+			    "scope": "storage.type",
+          "settings": {
+            "foreground": "#967a9b"
+          }
+        },
+        {
+          "scope": "meta.brace.square",
+          "settings": {
+            "foreground": "#B3C3CE"
+          }
+        },
+        // return export 之类
+        {
+          "scope": "keyword",
+          "settings": {
+            "foreground": "#5490b3"
+          }
+        },
+        // json key
+        {
+          "scope": [
+            "support.type",
+          ],
+          "settings": {
+            "foreground": "#b9b37b"
+          }
+        },
+        // static async extends
+        {
+          "scope": "storage",
+          "settings": {
+            "foreground": "#d3583c"
+          }
+        },
+        {
+          "scope": [
+            "variable.language.this",
+            "variable.language.super"
+          ],
+          "settings": {
+            "foreground": "#d3583c"
+          }
+        },
+        // 反斜杠里面的颜色
+        {
+    			"scope": "string",
+          "settings": {
+            "foreground": "#49a5a0"
+          }
+        },
+        // 内置变量，比如 false, true 等等
+        {
+        	"scope": [
+            "constant.language",
+            "meta.preprocessor"
+          ],
+          "settings": {
+            "foreground": "#e06d71"
+          }
+        },
+        // 导入的变量 R 等等
+        {
+          "scope": [
+            // "variable.other.readwrite",
+             "variable.other.object",
+              "variable.other.constant"
+          ],
+          "settings": {
+            // 建议和 editor.foreground 保持一致
+            // "foreground": "#b7cbcc"
+            "foreground": "#91a4a5"
+          }
+        },
+        {
+          "scope": "support.function",
+          "settings": {
+            "foreground": "#4A85AA"
+          }
+        },
+
+        // NOTE:  React 组件的颜色
+        {
+          // "scope": "storage",
+          // "scope": "keyword",
+          "scope": [
+            "support.type",
+            "support.class"
+          ],
+
+          "settings": {
+            // "foreground": "#4c96bb"
+            "foreground": "#4f9ec3"
+          }
+        },
+        // React 属性的颜色
+        { 
+          "scope": [
+            "entity.other.attribute-name.js",
+          ],
+
+          "settings": {
+            // "foreground": "#4c96bb"
+            "foreground": "#a99b79"
+          }
+        },
+        { 
+          "scope": [
+            "punctuation.definition.tag.html",
+            "punctuation.definition.tag.begin",
+            "punctuation.definition.tag.end"
+          ],
+          "settings": {
+            "foreground": "#4c96bb"
+          }
+        }, 
+        // meta.object-literal.key.js
+        // meta.object.member.js
+        { 
+          "scope": [
+            "meta.object-literal.key.js",
+            // "meta.object.member.js",
+          ],
+          "settings": {
+            "foreground": "#9F906E"
+          }
+        },
+        // ! && 之类的
+        { 
+          "scope": [
+            "keyword.operator.logical.js",
+          ],
+          "settings": {
+            "foreground": "#cbebec"
+          }
+        }, 
+        // 注释前面的 双 '//'
+        { 
+          "scope": [
+            "comment.line.double-slash.js",
+            "punctuation.definition.comment.js"
+          ],
+          "settings": {
+            "foreground": "#45585F"
+          }
+        },
+       // NOTE:  被括号那个插件覆盖了
+       { 
+        "scope": [
+          "punctuation.section.embedded.begin.js",
+          "punctuation.section.embedded.end.js"
+        ],
+        "settings": {
+          "foreground": "#607982"
+        }
+       },
+        // html 默认的  tag: div, h1, ...
+        {
+          "scope": "entity.name.tag",
+          "settings": {
+            "foreground": "#4c96bb"
+          }
+        },
+        // react done
+        {
+          "scope": "meta.brace.curly",
+          "settings": {
+            "foreground": "#ee5959"
+          }
+        },
+        {
+          "scope": "keyword",
+          "settings": {
+            "foreground": "#8B6F90"
+          }
+        },
+        { 
+          "scope": "constant.numeric",
+          "settings": {
+            "foreground": "#9B6B61"
+          }
+        }
+      ]
+    },
+  },
+  // my custom vim config for vim-mode
+  // 在 mac 想需要在终端设置如下命令来允许重复执行
+  // defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false ..
+  // "vim.debug.loggingLevelForConsole": "debug",
+  "vim.leader": "<space>",
+  "vim.searchHighlightColor": "#61455d",
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.handleKeys": {
+    "<C-a>": true,
+    "<C-e>": true,
+    "<C-f>": false,
+    "<C-j>": true,
+    "<C-s>": true,
+    "<C-g>": true
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "<space>"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
+    // 基本操作
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "S"
+      ],
+      "commands": [
+        "workbench.action.files.saveAll"
+      ]
+    },
+    // -- 折叠文件树中的所有文件夹
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "C"
+      ],
+      "commands": [
+        "workbench.files.action.collapseExplorerFolders"
+      ]
+    },
+    // 搜索文件
+    // FIXME:  not work
+    // {
+    //   "before": [
+    //     "<leader>",
+    //     "S",
+    //     "f"
+    //   ],
+    //   "commands": [
+    //     "workbench.action.findInFiles"
+    //   ]
+    // },
+    // 项目工程相关
+    {
+      "before": [
+        "<leader>",
+        "p",
+        "p"
+      ],
+      "commands": [
+        "projectManager.listProjects"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p",
+        "e"
+      ],
+      "commands": [
+        "projectManager.editProjects"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+
+    // 窗口相关操作
+    // -- 打开新窗口
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "n"
+      ],
+      "commands": [
+        "workbench.action.splitEditorRight"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.joinTwoGroups"
+      ]
+    },
+    // NOTE:  -- 聚焦到左边的窗口
+    // w-w 左边, w-e 右边
+    // 因为 w-h 绑定不起效果。。。
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.navigateLeft"
+      ]
+    },
+    // -- 聚焦到右边的窗口
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "e"
+      ],
+      "commands": [
+        "workbench.action.navigateRight"
+      ]
+    },
+    // 聚焦到上面的窗口
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.navigateUp"
+      ]
+    },
+    // 聚焦到下面的窗口
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.navigateDown"
+      ]
+    },
+    // 文件相关操作
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "S"
+      ],
+      "commands": [
+        "workbench.action.files.saveAll"
+      ]
+    },
+    // -- 已经打开的 Editor/Buffers
+    {
+      "before": [
+        "<leader>",
+        "b",
+        "b"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+        // NOTE:  open editors 没有 sort 功能。。
+        // "workbench.action.showAllEditors"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "<tab>"
+      ],
+      "commands": [
+        "extension.goto-previous-buffer"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "d"
+      ],
+      "commands": [
+        "git.openChange"
+      ]
+    },
+    // NOTE:  打开后必须要选择，否则会使所有快捷键失效。。
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "b"
+      ],
+      "commands": [
+        "git.checkout"
+      ]
+    },
+    // 打开 gitlens file blame
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "B"
+      ],
+      "commands": [
+        "gitlens.toggleFileBlame"
+      ]
+    },
+    // 查看当前 git Stats
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "l"
+      ],
+      "commands": [
+        "gitlens.showQuickRepoStatus"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "s"
+      ],
+      "commands": [
+        "git.stage"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "S"
+      ],
+      "commands": [
+        "git.stageAll"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "c"
+      ],
+      "commands": [
+        "git.commitStaged"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "C"
+      ],
+      "commands": [
+        "git.commitStaged"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "h"
+      ],
+      "commands": [
+        "git-graph.view"
+      ]
+    },
+    // 各种  Toggle
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "f"
+      ],
+      // "commands": ["workbench.view.explorer"]
+      "commands": [
+        "workbench.files.action.focusFilesExplorer"
+      ]
+    },
+    // 打开 activity 边栏
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "a"
+      ],
+      "commands": [
+        "workbench.action.toggleActivityBarVisibility"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "g"
+      ],
+      "commands": [
+        "workbench.view.extension.gitlens"
+      ]
+    },
+    // 展开 exercism 练习题
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.extension.exercism-explorer"
+      ]
+    },
+    // 文件相关操作
+    // see more: https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils 
+    // 重命名文件
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "R"
+      ],
+      "commands": [
+        "fileutils.renameFile"
+      ]
+    },
+    // 新建文件
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "n"
+      ],
+      "commands": [
+        "fileutils.newFile"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "D"
+      ],
+      "commands": [
+        "fileutils.removeFile"
+      ]
+    },
+    // 移动文件
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "m"
+      ],
+      "commands": [
+        "fileutils.moveFile"
+      ]
+    },
+    // END 文件相关
+    {
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "commands": [
+        "textmarker.clearAllHighlight"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "L"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": [
+        "ctrl",
+        "e"
+      ],
+      "commands": [
+        "extension.vim_end"
+      ]
+      // "after": ["$"]
+    },
+    // 搜索
+    {
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      // "commands": ["actions.find"]
+      "after": [
+        "*"
+      ]
+    },
+    // NOTE:  目前有三种搜索方法了
+    // 1. <leader> s, vim 的 * 搜索
+    // 2. ctrl+s, 高亮单词，可以高亮多个
+    // 3. ctrl+cmd+s, 全局搜索
+    {
+      "before": [
+        "leader",
+        "s"
+      ],
+      "after": [
+        "*"
+      ]
+    },
+    {
+      "before": [
+        "<C-i>"
+      ],
+      // "commands": ["editor.action.smartSelect.expand"]
+      "after": [
+        "v",
+        "a",
+        "w"
+      ]
+    },
+    {
+      "before": [
+        "ctrl+l"
+      ],
+      "after": [
+        "z",
+        "z"
+      ]
+    },
+    {
+      "before": [
+        "ctrl+k"
+      ],
+      // "after": ["4", "k"]
+      "commands": [
+        "cursorUp",
+        "cursorUp",
+        "cursorUp",
+      ]
+    },
+    {
+      "before": [
+        "ctrl+j"
+      ],
+      // "after": ["4", "j"]
+      "commands": [
+        "cursorDown",
+        "cursorDown",
+        "cursorDown",
+      ]
+    },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "ctrl+l"
+      ],
+      "after": [
+        "z",
+        "z"
+      ]
+    },
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    },
+    {
+      "before": [
+        "ctrl+j"
+      ],
+      "after": [
+        "j"
+      ]
+    },
+    {
+      "before": [
+        "ctrl+k"
+      ],
+      "after": [
+        "k"
+      ]
+    },
+    // FIXME:  not work
+    {
+      "before": [
+        "ctrl+a"
+      ],
+      "after": [
+        "0"
+      ]
+    },
+    {
+      "before": [
+        "ctrl+e"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "f", "a"
+      ],
+      "after": [
+        "0"
+      ]
+    },
+    {
+      "before": [
+        "f", "e"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    // FIXME: not work
+    {
+      "before": [
+        "ctrl+g"
+      ],
+      "after": [
+        "esc"
+      ]
+    },
+    {
+      "before": [
+        "f", "d"
+      ],
+      "after": [
+        "esc"
+      ]
+    },
+    {
+      "before": [
+        ":"
+      ],
+      "commands": [
+        "workbench.action.showCommands",
+      ]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "f",
+        "d"
+      ],
+      // auto-save
+      "after": [
+        "<esc>"
+        // ":",
+        // "w",
+        // "<Enter>"
+      ]
+      // "after": ["<esc>"]
+    },
+    // not work
+    // {
+    //   "before": ["ctrl", "m"],
+    //   "after": ["enter"]
+    // },
+  ],
+  "subtleBrackets.style": {
+    // "borderColor": "#839496",
+    "borderColor": "#94a8ab",
+    "borderWidth": "1px"
+  },
+  // PLUGIN:   matching tag
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "name": {
+        "underline": "#1A7782"
+      }
+    }
+  },
+  "workbench.iconTheme": "vscode-seedling-icon-theme",
+  "workbench.editor.showIcons": true,
+  "vim.visualstar": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.statusBar.feedback.visible": false,
+  // PLUGIN:   zoom
+  "zoombar.uiDisplayOrder": "-+",
+  // PLUGIN:  github 通知
+  "githubNotificationsBell.refreshInterval": 600, // Amount of seconds to wait before each refresh
+  "githubNotificationsBell.oauthToken": "0c9b1cdb47c6b894d4b954d7405dc52c3143dd83", // OAuth token used for requesting the notifications
+  "githubNotificationsBell.alignment": "right", // Bell's position in the statusbar (left/right)
+  "githubNotificationsBell.icon": "mark-github", // The icon to use in the statusbar
+  "githubNotificationsBell.color": "", // Bell's color when there are some notifications
+  "githubNotificationsBell.hideIfNone": true, // Hide the bell if there are no notifications
+  "githubNotificationsBell.showNumberOfNotifications": true, // Show the number of notifications alongside the bell icon
+  // PLUGIN:  keywords hightlight
+  "todohighlight.keywords": [
+    {
+      "text": " NOTE: ",
+      "color": "orange",
+      "border": "1px dashed #FFBD45",
+      "backgroundColor": "#483204",
+    },
+    {
+      "text": " FIXME: ",
+      "color": "tomato",
+      "border": "1px dashed tomato",
+      "backgroundColor": "#483204",
+    },
+    {
+      "text": " TODO: ",
+      "color": "#00B1AB",
+      "border": "1px dashed #00B1AB",
+      "backgroundColor": "#003743",
+    },
+    {
+      "text": " PLUGIN: ",
+      "color": "#6970C1",
+      "border": "1px dashed #6970C1",
+      "backgroundColor": "#404159",
+    },
+  ],
+  //  PLUGIN:  text marker
+  "textmarker.highlightColors": ["cyan", "pink", "magenta", "cornflowerblue", "orange", "skyblue"],
+  "todohighlight.defaultStyle": {
+    "borderRadius": "1px",
+  },
+  "textmarker.defaultHighlightColor": "tomato",
+  "textmarker.defaultHighlightOpacity": 0.2,
+
+  //  PLUGIN:  自定义 css
+  "vscode_custom_css.imports": ["file:///Users/xieyiming/code/vscode_custom.css"],
+  "vscode_custom_css.policy": true,
+  // PLUGIN:  clipboard
+  "clipboard-manager.preview": false,
+  "diffEditor.renderSideBySide": true,
+  "clipboard-manager.snippet.enabled": false,
+  // PLUGIN:  gitlens
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.mode.active": "review",
+  "projectManager.sortList": "Recent",
+  "gitlens.blame.highlight.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.annotations.changes": false,
+  "gitlens.hovers.annotations.details": false,
+  "gitlens.hovers.annotations.enabled": false,
+  "gitlens.hovers.annotations.over": "annotation",
+  "gitlens.hovers.currentLine.changes": false,
+  "gitlens.hovers.currentLine.details": false,
+  "gitlens.hovers.currentLine.enabled": false,
+  "gitlens.hovers.enabled": false,
+  // "gitlens.statusBar.alignment": "right",
+  // "gitlens.statusBar.enabled": true,
+  // "gitlens.mode.statusBar.enabled": true,
+
+  // PLUGIN:  eslint
+  // 各种 lint 导致 code helper CPU 非常高
+  // https://github.com/Microsoft/vscode/issues/51776#issuecomment-418359450
+  // 只有保存当前文件的时候才触发
+  "eslint.run": "onSave",
+  "eslint.autoFixOnSave": true,
+	"eslint.provideLintTask": false,
+	"[javascript]": {
+		"editor.formatOnSave": true,
+	},
+	"typescript.validate.enable": false,
+	"javascript.validate.enable": false,
+	// "files.watcherExclude": {
+	// 	"**": true
+	// },
+  // "files.useExperimentalFileWatcher": false,
+  "search.followSymlinks": false,
+  "git.ignoreLimitWarning": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/tmp": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true
+  },
+  "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/node_modules/**": true,
+      "**/tmp/**": true,
+      "**/bower_components/**": true,
+      "**/dist/**": true
+  },
+
+  // PLUGIN:  import const
+  // Decoration color for small packages
+  "importCost.smallPackageColor": "#4b6b0a", // green
+  // Decoration color for medium packages
+  "importCost.mediumPackageColor": "#a0801d",
+  // Decoration color for large packages
+  "importCost.largePackageColor": "#ff4b2b",
+  "git-graph.showStatusBarItem": false,
+}
