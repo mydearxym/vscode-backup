@@ -1,0 +1,489 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    // 各种取消
+    {
+        "key": "ctrl+g",
+        "command": "extension.vim_escape",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    // FIXME:  not work
+    {
+        "key": "ctrl+g",
+        "command": "extension.vim_escape",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Visual' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+        "key": "escape",
+        "command": "extension.vim_escape",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "workbench.action.closeQuickOpen",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "shift+escape",
+        "command": "-workbench.action.closeQuickOpen",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "settings.action.clearSearchResults",
+        "when": "inSettingsSearch"
+    },
+    {
+        "key": "escape",
+        "command": "-settings.action.clearSearchResults",
+        "when": "inSettingsSearch"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "hideSuggestWidget",
+        "when": "suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "escape",
+        "command": "-hideSuggestWidget",
+        "when": "suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "cancelRenameInput",
+        "when": "editorFocus && renameInputVisible"
+    },
+    {
+        "key": "escape",
+        "command": "-cancelRenameInput",
+        "when": "editorFocus && renameInputVisible"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "cancelSelection",
+        "when": "editorHasSelection && textInputFocus"
+    },
+    {
+        "key": "shift+escape",
+        "command": "-cancelSelection",
+        "when": "editorHasSelection && textInputFocus"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "leaveSnippet",
+        "when": "editorTextFocus && inSnippetMode"
+    },
+    {
+        "key": "escape",
+        "command": "-leaveSnippet",
+        "when": "editorTextFocus && inSnippetMode"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "search.action.cancel",
+        "when": "listFocus && searchViewletVisible && !inputFocus"
+    },
+    {
+        "key": "escape",
+        "command": "-search.action.cancel",
+        "when": "listFocus && searchViewletVisible && !inputFocus"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "workbench.action.hideInterfaceOverview",
+        "when": "interfaceOverviewVisible"
+    },
+    {
+        "key": "escape",
+        "command": "-workbench.action.hideInterfaceOverview",
+        "when": "interfaceOverviewVisible"
+    },
+    // end 各种取消
+    // 移动光标到行首
+    {
+        "key": "ctrl+a",
+        "command": "cursorHome",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "home",
+        "command": "-cursorHome",
+        "when": "textInputFocus"
+    },
+    // end
+    // 向右逸动贯标
+    {
+        "key": "ctrl+f",
+        "command": "cursorRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "right",
+        "command": "-cursorRight",
+        "when": "textInputFocus"
+    },
+    // end
+    // 保存文件 
+    {
+        "key": "ctrl+x ctrl+s",
+        "command": "workbench.action.files.save"
+    },
+    {
+        "key": "cmd+s",
+        "command": "workbench.action.files.save"
+    },  
+    {
+        "key": "cmd+s",
+        "command": "-workbench.action.files.save"
+    },
+    // end
+    // toggle 文件目录树
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    // 上下翻页以及移动，注意这里的顺序很关键
+    {
+        "key": "ctrl+p",
+        "command": "cursorPageUp",
+        // "when": "textInputFocus"
+        "when": "textInputFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+        "key": "pageup",
+        "command": "-cursorPageUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "cursorPageDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "pagedown",
+        "command": "-cursorPageDown",
+        "when": "textInputFocus"
+    },
+    // must, ctrl+e 被 vim virturl mode 接管, 需要在这里声明
+    {
+        "key": "ctrl+e",
+        "command": "extension.vim_end",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "cursorEnd",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    // 插入模式下删除行
+    {
+        "key": "ctrl+k",
+        "command": "deleteAllRight",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    // insert 模式下模拟回车
+    // TODO： 应该模拟成回车
+    {
+        "key":"ctrl+j",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible",
+        "args": {
+          "name": "insert enter"
+        }
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-lineBreakInsert",
+    },
+    // Insert 模式下上下移动
+    {
+        "key": "ctrl+p",
+        "command": "extension.vim_up",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+        "key": "up",
+        "command": "-extension.vim_up",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "extension.vim_down",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+        "key": "down",
+        "command": "-extension.vim_down",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+        "key": "cmd+z",
+        "command": "workbench.action.toggleZenMode"
+    },
+    {
+        "key": "cmd+k z",
+        "command": "-workbench.action.toggleZenMode"
+    },
+    // 删除单词
+    {
+        "key": "ctrl+w",
+        "command": "deleteWordLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+backspace",
+        "command": "-deleteWordLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    // 把 ctrl+d 让给删除
+    {
+        "key": "ctrl+d",
+        "command": "-extension.vim_ctrl+d",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+cmd+s",
+        "command": "workbench.view.search",
+        "when": "!searchViewletVisible"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.view.search",
+        "when": "!searchViewletVisible"
+    },
+    {
+        "key": "ctrl+cmd+k",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    // 使用 enter 打开文件
+    {
+      "key": "cmd+enter",
+      "command": "renameFile",
+      "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+      "key": "enter",
+      "command": "-renameFile",
+      "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+      "key": "ctrl+m",
+      "command": "list.select",
+      "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.navigateToLastEditLocation"
+    },
+    {
+        "key": "cmd+k cmd+q",
+        "command": "-workbench.action.navigateToLastEditLocation"
+    },
+    {
+        "key": "ctrl+cmd+3",
+        "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+x ctrl+f",
+        "command": "breadcrumbs.focusAndSelect",
+        "when": "breadcrumbsPossible"
+    },
+    {
+        "key": "shift+cmd+.",
+        "command": "-breadcrumbs.focusAndSelect",
+        "when": "breadcrumbsPossible"
+    },
+    {
+        "key": "ctrl+shift+cmd+g",
+        "command": "workbench.action.gotoLine"
+    },
+    // 面包屑相关
+    // 隐藏当前文件夹的列表
+    {
+        "key": "ctrl+g",
+        "command": "breadcrumbs.selectEditor",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "escape",
+        "command": "-breadcrumbs.selectEditor",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    // 切换文件夹层级
+    {
+        "key": "ctrl+l",
+        "command": "breadcrumbs.focusNext",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "alt+right",
+        "command": "-breadcrumbs.focusNext",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "breadcrumbs.focusPrevious",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "alt+left",
+        "command": "-breadcrumbs.focusPrevious",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "enter",
+        "command": "list.select",
+        "when": "listFocus && !inputFocus"
+    },
+    // 多选
+    {
+        "key": "ctrl+shift+.",
+        "command": "editor.action.addSelectionToNextFindMatch"
+    },  
+    {
+        "key": "cmd+f",
+        "command": "actions.find"
+    },
+    {
+        "key": "cmd+k cmd+f",
+        "command": "-editor.action.formatSelection",
+        "when": "editorHasDocumentSelectionFormattingProvider && editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+cmd+g",
+        "command": "workbench.action.closePanel"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.gotoLine"
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "cmd+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+shift+cmd+b",
+        "command": "workbench.action.toggleEditorVisibility"
+    },
+    // 关闭搜索框，cool
+    {
+        "key": "ctrl+g",
+        "command": "closeFindWidget",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    {
+        "key": "escape",
+        "command": "-closeFindWidget",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "textmarker.toggleHighlight"
+    },
+    {
+        "key": "ctrl+shift+cmd+a",
+        "command": "extension.vim_ctrl+a",
+        "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-extension.vim_ctrl+a",
+        "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "notifications.hideToasts",
+        "when": "notificationToastsVisible"
+    },
+    {
+        "key": "escape",
+        "command": "-notifications.hideToasts",
+        "when": "notificationToastsVisible"
+    },
+    // 向右边分割窗口
+    {
+        "key": "ctrl+x 2",
+        "command": "workbench.action.splitEditorRight"
+    },
+    {
+        "key": "ctrl+cmd+p",
+        "command": "clipboard-manager.editor.pickAndPaste",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-clipboard-manager.editor.pickAndPaste",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+cmd+f",
+        "command": "workbench.action.toggleFullScreen"
+    },
+    {
+        "key": "ctrl+cmd+f",
+        "command": "-workbench.action.toggleFullScreen"
+    },
+    {
+        "key": "ctrl+cmd+f",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+cmd+r",
+        "command": "workbench.action.replaceInFiles"
+    },
+    {
+        "key": "shift+cmd+h",
+        "command": "-workbench.action.replaceInFiles"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "cmd+down",
+        "command": "-selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    }
+
+/*     {
+        "key": "ctrl+g",
+        "command": "search.action.focusSearchList"
+    }, */
+    // {
+    //     "key": "ctrl+j",
+    //     "command": "extension.vim_navigateLeft",
+    //     "when": "vim.active && vim.use<C-w>",
+    // }
+    // {
+    //     "key": "ctrl+g",
+    //     "command": "workbench.action.closePanel"
+    // },
+    // end
+    // 可以工作哈
+    // end
+     // end
+]
