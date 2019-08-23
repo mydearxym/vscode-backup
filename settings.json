@@ -1,8 +1,5 @@
 // Place your settings in this file to overwrite the default settings
 {
-  // base color
-  // "editor.foreground": "grey",
-  "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
   "sync.gist": "679f0ba4ae63ea95175b352f7faa0276",
   "workbench.statusBar.visible": true,
   "workbench.activityBar.visible": false,
@@ -626,6 +623,26 @@
         "git.openChange"
       ]
     },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "x"
+      ],
+      "commands": [
+        "git.clean"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "X"
+      ],
+      "commands": [
+        "git.cleanAll"
+      ]
+    },
     // NOTE:  打开后必须要选择，否则会使所有快捷键失效。。
     {
       "before": [
@@ -893,8 +910,42 @@
         "cursorDown",
       ]
     },
+    // 折叠相关
+    {
+      "before": [
+        "z",
+        "f"
+      ],
+      "after": [
+        "z",
+        "c"
+      ]
+    },
+    {
+      "before": [
+        "z", "F"
+      ],
+      // "after": ["4", "j"]
+      "commands": ["editor.foldAll"]
+    },
+    {
+      "before": [
+        "z", "O"
+      ],
+      // "after": ["4", "j"]
+      "commands": ["editor.unfoldAll"]
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "<space>"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
     {
       "before": [
         "ctrl+l"
@@ -925,6 +976,8 @@
         "ctrl+j"
       ],
       "after": [
+        "j",
+        "j",
         "j"
       ]
     },
@@ -933,18 +986,20 @@
         "ctrl+k"
       ],
       "after": [
+        "k",
+        "k",
         "k"
       ]
     },
     // FIXME:  not work
-    {
-      "before": [
-        "ctrl+a"
-      ],
-      "after": [
-        "0"
-      ]
-    },
+    // {
+    //   "before": [
+    //     "ctrl+a"
+    //   ],
+    //   // "after": [
+    //   //   "0"
+    //   // ]
+    // },
     {
       "before": [
         "ctrl+e"
@@ -1029,7 +1084,6 @@
       }
     }
   },
-  "workbench.iconTheme": "vscode-seedling-icon-theme",
   "workbench.editor.showIcons": true,
   "vim.visualstar": true,
   "[jsonc]": {
@@ -1081,7 +1135,7 @@
   "textmarker.defaultHighlightColor": "tomato",
   "textmarker.defaultHighlightOpacity": 0.2,
 
-  //  PLUGIN:  自定义 css
+  //  settings.json
   "vscode_custom_css.imports": ["file:///Users/xieyiming/code/vscode_custom.css"],
   "vscode_custom_css.policy": true,
   // PLUGIN:  clipboard
@@ -1091,7 +1145,6 @@
   // PLUGIN:  gitlens
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
-  "gitlens.mode.active": "review",
   "projectManager.sortList": "Recent",
   "gitlens.blame.highlight.enabled": false,
   "gitlens.codeLens.enabled": false,
@@ -1153,4 +1206,28 @@
   // Decoration color for large packages
   "importCost.largePackageColor": "#ff4b2b",
   "git-graph.showStatusBarItem": false,
+  "search.useGlobalIgnoreFiles": true,
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/tmp": true
+  },
+  "workbench.iconTheme": "vscode-seedling-icon-theme",
+  "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
+  
+  // sometimes when add new deps, it will cause error in mix.exs
+  // see: https://github.com/JakeBecker/elixir-ls/issues/71 
+  // "elixirLS.fetchDeps": false
+
+  // PLUGIN:  macros commands
+  "macros": {
+    "lineStart": ["cursorHome"],
+    "confirmEsc": [ 
+      // "workbench.action.toggleActivityBarVisibility",
+      "extension.vim_escape",
+      // "editor.cancelOperation",
+      // "cancelSelection",
+      // {"command": "Escape"}
+    ]
+  }
 }
